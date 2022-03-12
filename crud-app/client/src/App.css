@@ -1,15 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background: url("./img/employees.jpg") no-repeat 50% / cover;
+}
+
+.info-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  width: 550px;
+  height: 650px;
+  background: rgba(224, 222, 231, 0.7);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.info-form h1 {
+  margin-top: 20px;
+  font-size: 35px;
+  color: rgba(62, 18, 221, 0.8);
 }
 
 .information {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: 550px;
+  height: 650px;
   align-items: center;
+  opacity: 1;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-input label {
+  font-size: 18px;
 }
 
 .information input {
@@ -17,14 +56,26 @@
   height: 50px;
   font-size: 20px;
   padding-left: 10px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  background: rgb(227, 228, 230);
+  color: rgb(76, 76, 231);
 }
 
 .information button {
-  width: 312px;
+  width: 314px;
   height: 50px;
-  margin-top: 15px;
+  margin-top: 20px;
+  border: 2px solid black;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: white;
+  border-radius: 50px;
 }
 
 .information button:hover {
   cursor: pointer;
+  color: white;
+  background-color: black;
 }
