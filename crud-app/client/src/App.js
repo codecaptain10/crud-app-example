@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Axios from "axios";
 import "./App.css";
 
+//components
+import Nav from "./components/Nav";
+
 function App() {
   //State (hooks)
   const [name, setName] = useState("");
@@ -32,6 +35,7 @@ function App() {
 
   return (
     <div className='App'>
+      <Nav />
       <div className='info-form'>
         <h1>Employee Register</h1>
 

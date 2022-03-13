@@ -20,10 +20,11 @@
   justify-content: center;
   align-items: center;
   background-color: aliceblue;
-  width: 550px;
-  height: 650px;
+  width: 500px;
+  height: 600px;
   background: rgba(224, 222, 231, 0.7);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 70px;
 }
 
 .info-form h1 {
@@ -36,8 +37,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 550px;
-  height: 650px;
+  width: 500px;
+  height: 600px;
   align-items: center;
   opacity: 1;
 }
@@ -78,4 +79,39 @@
   cursor: pointer;
   color: white;
   background-color: black;
+}
+
+/*----- Nav -----*/
+.nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(76, 76, 240, 0.7);
+  height: 60px;
+  width: 100%;
+}
+
+.nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 60px;
+  list-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.nav-bar li {
+  color: silver;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.nav-bar li:hover {
+  color: whitesmoke;
+  background-color: rgb(93, 93, 199);
+  cursor: pointer;
 }
