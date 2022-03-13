@@ -10,6 +10,7 @@ function App() {
   const [wage, setWage] = useState(0);
 
   //Functions
+  //Test function to display variables
   const displayInfo = () => {
     console.log(
       `name:${name}, age:${age}, country:${country}, position:${position}, wage:${wage}`
