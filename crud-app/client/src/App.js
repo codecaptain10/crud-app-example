@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Axios from "axios";
 import "./App.css";
 
 function App() {
@@ -9,12 +10,24 @@ function App() {
   const [position, setPosition] = useState("");
   const [wage, setWage] = useState(0);
 
-  //Functions
   //Test function to display variables
   const displayInfo = () => {
     console.log(
       `name:${name}, age:${age}, country:${country}, position:${position}, wage:${wage}`
     );
+  };
+
+  //Function with using Axios
+  const addEmployee = () => {
+    Axios.post("http://localhost:3001/create", {
+      name: name,
+      age: age,
+      country: country,
+      position: position,
+      wage: wage,
+    }).then(() => {
+      console.log("Success!");
+    });
   };
 
   return (
@@ -58,7 +71,7 @@ function App() {
               onChange={event => setWage(event.target.value)}></input>
           </div>
 
-          <button onClick={displayInfo}>Add Employee</button>
+          <button onClick={addEmployee}>Add Employee</button>
         </div>
       </div>
     </div>
