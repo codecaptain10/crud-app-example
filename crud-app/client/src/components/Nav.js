@@ -1,13 +1,28 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Nav() {
+  const navLinksStyle = {
+    color: "white",
+    textDecoration: "none",
+    flexGrow: "1",
+  };
+
   return (
     <div className='nav-bar'>
       <ul>
-        <li>Home</li>
-        <li>Show Employees</li>
-        <li>Add Employee</li>
-        <li>Delete Employee</li>
+        <Link style={navLinksStyle} to='/'>
+          <li>Home</li>
+        </Link>
+        <Link style={navLinksStyle} to='/show'>
+          <li>Show</li>
+        </Link>
+        <Link style={navLinksStyle} to='create'>
+          <li>Create</li>
+        </Link>
+        <Link style={navLinksStyle} to='/delete'>
+          <li>Delete</li>
+        </Link>
       </ul>
     </div>
   );
