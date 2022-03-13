@@ -13,6 +13,7 @@ const db = mysql.createConnection({
   database: "employeeSystem",
 });
 
+//Endpoint POST to add a new employee
 app.post("/create", (req, res) => {
   const name = req.body.name;
   const age = req.body.age;
@@ -31,6 +32,17 @@ app.post("/create", (req, res) => {
       }
     }
   );
+});
+
+//Endpoint GET to get the employees
+app.get("/employees", (req, res) => {
+  db.query("SELECT * FROM employees", (err, result) => {
+    if (err) {
+      console.log("Error: " + err);
+    } else {
+      res.send(result);
+    }
+  });
 });
 
 app.listen(3001, () => {

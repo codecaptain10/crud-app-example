@@ -163,3 +163,29 @@
 
   text-align: center;
 }
+
+/*----- Show -----*/
+button {
+  width: 314px;
+  height: 50px;
+  margin-top: 20px;
+  border: 2px solid black;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: white;
+  border-radius: 50px;
+}
+
+button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+.show-employees-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aqua;
+  width: 100%;
+}
