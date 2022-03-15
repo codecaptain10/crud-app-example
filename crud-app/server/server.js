@@ -45,6 +45,27 @@ app.get("/employees", (req, res) => {
   });
 });
 
+//Endpoint PUT to update the db
+app.put("/update", (req, res) => {
+  const wage = req.body.wage;
+  const id = req.body.id;
+
+  db.query(
+    "UPDATE SET employees wage = ? WHERE id = ?",
+    [wage, id],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
+
+//Endpoint DELETE to remove an element
+//app.delete()
+
 app.listen(3001, () => {
   console.log("Server is working on port 3001");
 });

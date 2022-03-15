@@ -9,6 +9,7 @@ import Nav from "./components/Nav";
 import Home from "./components/Home";
 import AddEmployee from "./components/AddEmployee";
 import ShowEmployee from "./components/ShowEmployee";
+import UpdateEmployee from "./components/UpdateEmployee";
 import DeleteEmployee from "./components/DeleteEmployee";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/' element={<Home />} />
           <Route exact path='/show' element={<ShowEmployee />} />
           <Route exact path='/create' element={<AddEmployee />} />
+          <Route exact path='/update' element={<UpdateEmployee />} />
           <Route exact path='/delete' element={<DeleteEmployee />} />
         </Routes>
       </div>

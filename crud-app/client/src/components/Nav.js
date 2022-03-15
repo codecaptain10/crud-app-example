@@ -20,6 +20,9 @@ function Nav() {
         <Link style={navLinksStyle} to='create'>
           <li>Create</li>
         </Link>
+        <Link style={navLinksStyle} to='update'>
+          <li>Update</li>
+        </Link>
         <Link style={navLinksStyle} to='/delete'>
           <li>Delete</li>
         </Link>
