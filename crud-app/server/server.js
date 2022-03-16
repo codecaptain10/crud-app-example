@@ -47,12 +47,12 @@ app.get("/employees", (req, res) => {
 
 //Endpoint PUT to update the db
 app.put("/update", (req, res) => {
+  const employee_id = req.body.employee_id;
   const wage = req.body.wage;
-  const id = req.body.id;
 
   db.query(
-    "UPDATE SET employees wage = ? WHERE id = ?",
-    [wage, id],
+    "UPDATE employees SET wage = ? WHERE employee_id = ?",
+    [wage, employee_id],
     (err, result) => {
       if (err) {
         console.log(err);
