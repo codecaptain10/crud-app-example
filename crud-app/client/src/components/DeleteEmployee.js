@@ -33,6 +33,7 @@ function DeleteEmployee() {
 
   const deleteEmployee = id => {
     Axios.delete(`http://localhost:3001/delete/${id}`);
+    console.log(id);
   };
 
   return (
@@ -54,7 +55,9 @@ function DeleteEmployee() {
                 </div>
                 <div className='delete-employee'>
                   <button
-                    onClick={deleteEmployee(value.employee_id)}
+                    onClick={() => {
+                      deleteEmployee(value.employee_id);
+                    }}
                     className='delete-btn'>
                     Delete
                   </button>
