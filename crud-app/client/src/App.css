@@ -346,3 +346,20 @@ button:hover {
   color: black;
   border-radius: 50px;
 }
+
+/*----- Delete -----*/
+.delete-employee {
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30%;
+  height: 100%;
+
+  flex-grow: 1;
+}
+
+.delete-btn {
+  width: 100%;
+}

@@ -68,8 +68,19 @@ app.put("/update", (req, res) => {
 });
 
 //Endpoint DELETE to remove an element
-//app.delete()
+app.delete("/delete/:employee_id", (req, res) => {
+  const id = req.params.employee_id;
 
+  db.query("DELETE FROM employees WHERE employee_id = ?", id, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
+
+//Server listen
 app.listen(3001, () => {
   console.log("Server is working on port 3001");
 });

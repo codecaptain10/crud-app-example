@@ -19,31 +19,6 @@ function UpdateEmployee() {
   };
 
   const updateEmployee = (value, id) => {
-    /* 
-    //Idea if something is emptys
-
-    if (newName == "") {
-      setNewName(value.name);
-    }
-
-    if (newAge == "") {
-      setNewAge(value.age);
-    }
-
-    if (newCountry == "") {
-      setNewCountry(value.country);
-    }
-
-    if (newPosition == "") {
-      setNewPosition(value.position);
-    }
-
-    if (newWage == "") {
-      setNewWage(value.wage);
-    }
-
-    */
-
     Axios.put("http://localhost:3001/update", {
       name: newName,
       age: newAge,
@@ -137,7 +112,7 @@ function UpdateEmployee() {
                   <div className='simple-data'>
                     <input
                       type='text'
-                      placeholder='value.wage'
+                      placeholder={value.wage}
                       onChange={event => {
                         setNewWage(event.target.value);
                       }}
