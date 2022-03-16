@@ -304,7 +304,7 @@ button:hover {
   flex-direction: column;
   width: 45%;
   height: 100%;
-  background-color: aqua;
+
   flex-grow: 1;
   justify-content: space-around;
 }
@@ -314,9 +314,10 @@ button:hover {
   margin-right: 5px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   width: 45%;
   height: 100%;
-  background-color: burlywood;
+
   flex-grow: 1;
 }
 
@@ -328,6 +329,10 @@ button:hover {
 }
 .simple-data input {
   width: 50%;
+  margin-right: 5px;
+  border: 2px solid black;
+  background: rgb(227, 228, 230);
+  color: rgb(76, 76, 231);
 }
 
 .simple-data button {
@@ -338,5 +343,6 @@ button:hover {
   font-size: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: white;
+  color: black;
   border-radius: 50px;
 }
